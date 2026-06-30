@@ -1,0 +1,46 @@
+# Commit conventions
+
+- Before creating any git commit, inspect the repository's local commit style.
+- Required checks before `git commit`:
+  - `git log --oneline -10`
+  - search for repo docs/rules if the style is unclear: `rg -n "commit|conventional|semantic|changeset|changelog" .`
+- Follow the existing repository convention over generic defaults.
+
+## Phoenix
+
+For `C:\a-phoenix\phoenix`, use the emoji + conventional commit style used by the repository.
+
+Preferred examples:
+
+```text
+✨ feat(scope): summary
+📝 docs(scope): summary
+✅ chore(scope): summary
+♻️ refactor(scope): summary
+🐛 fix(scope): summary
+```
+
+For documentation-only architecture review changes, prefer:
+
+```text
+📝 docs(architecture-review): add EP-231 responses
+```
+
+Include the Jira key when the work is tied to a Jira issue.
+
+Avoid generic commit messages such as:
+
+```text
+Add architecture review responses
+Update files
+Fix stuff
+```
+
+Before pushing a feature branch, run:
+
+```powershell
+git log --oneline origin/develop..HEAD
+```
+
+If a new commit message does not match the convention and the branch is not merged,
+amend or rebase before pushing.

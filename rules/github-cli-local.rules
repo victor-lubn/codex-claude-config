@@ -1,0 +1,14 @@
+# Local GitHub CLI setup
+
+- GitHub CLI is installed on this machine through winget package `GitHub.cli`.
+- Installed executable path: `C:\Program Files\GitHub CLI\gh.exe`.
+- If `gh` is not found in the current PowerShell session, use the full executable path:
+
+```powershell
+& 'C:\Program Files\GitHub CLI\gh.exe' --version
+& 'C:\Program Files\GitHub CLI\gh.exe' auth status
+& 'C:\Program Files\GitHub CLI\gh.exe' pr create --draft --base develop --head <branch> --title '<title>' --body '<body>'
+```
+
+- A new terminal session should usually pick up the PATH update from the installer.
+- For `eomdev-ai/phoenix`, prefer `gh` for PR creation/checks when available, then fall back to local GitHub credentials + REST only if `gh` is unavailable or unauthenticated.

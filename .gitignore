@@ -1,0 +1,24 @@
+# Never store local runtime state or secrets.
+.codex/auth.json
+.codex/*.sqlite
+.codex/*.sqlite-shm
+.codex/*.sqlite-wal
+.codex/log/
+.codex/logs/
+.codex/sessions/
+.codex/archived_sessions/
+.codex/history.jsonl
+.codex/session_index.jsonl
+.codex/plugins/cache/
+.codex/.sandbox/
+.codex/.sandbox-bin/
+.codex/.sandbox-secrets/
+.codex/.tmp/
+.codex/tmp/
+.codex/attachments/
+
+# Local OS/editor noise.
+Thumbs.db
+.DS_Store
+*.tmp
+*.log

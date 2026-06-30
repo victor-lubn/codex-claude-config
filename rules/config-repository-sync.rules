@@ -1,0 +1,25 @@
+# Personal config repository sync
+
+- Personal Codex/Claude configuration source repository:
+  `https://github.com/victor-lubn/codex-claude-config.git`
+- Local clone path:
+  `C:\a-phoenix\codex-claude-config`
+
+When the user asks to add, update, save, or persist something "here", "in config",
+"in Codex config", "in Claude config", or "in the personal config repo":
+
+1. Update the local runtime config if needed, for example files under
+   `C:\Users\ViktarLubinski\.codex\rules`.
+2. Mirror the portable/safe version into `C:\a-phoenix\codex-claude-config`.
+3. Do not copy secrets, auth files, sqlite state, sessions, logs, plugin cache,
+   sandboxes, temp files, or attachments.
+4. Commit the config repo change.
+5. Push the config repo change to GitHub.
+
+Before committing in the config repo, inspect local commit style with:
+
+```powershell
+git log --oneline -10
+```
+
+If the config repo has no stronger convention, use a clear simple commit message.
