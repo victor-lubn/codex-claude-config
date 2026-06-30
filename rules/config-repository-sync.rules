@@ -8,13 +8,16 @@
 When the user asks to add, update, save, or persist something "here", "in config",
 "in Codex config", "in Claude config", or "in the personal config repo":
 
-1. Update the local runtime config if needed, for example files under
-   `C:\Users\ViktarLubinski\.codex\rules`.
+1. Update the local runtime config for both tools when the rule applies to both:
+   Codex under `C:\Users\ViktarLubinski\.codex\rules` and Claude under
+   `C:\Users\ViktarLubinski\.claude`.
 2. Mirror the portable/safe version into `C:\a-phoenix\codex-claude-config`.
-3. Do not copy secrets, auth files, sqlite state, sessions, logs, plugin cache,
+3. Keep Codex and Claude portable instructions aligned unless the user clearly
+   asks for one tool only.
+4. Do not copy secrets, auth files, sqlite state, sessions, logs, plugin cache,
    sandboxes, temp files, or attachments.
-4. Commit the config repo change.
-5. Push the config repo change to GitHub.
+5. Commit the config repo change.
+6. Push the config repo change to GitHub.
 
 Before committing in the config repo, inspect local commit style with:
 

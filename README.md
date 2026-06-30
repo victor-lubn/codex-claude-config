@@ -9,7 +9,9 @@ or other runtime data.
 ## Contents
 
 - `rules/` - portable Codex user rules.
-- `install.ps1` - copies rules into `%USERPROFILE%\.codex\rules`.
+- `claude/` - portable Claude user instructions.
+- `install.ps1` - copies Codex rules into `%USERPROFILE%\.codex\rules`
+  and Claude instructions into `%USERPROFILE%\.claude`.
 
 ## Install
 
@@ -23,3 +25,6 @@ From this repository:
 
 When a portable Codex/Claude rule is added locally, mirror it here, commit it, and
 push it to GitHub.
+
+When a rule applies to both tools, keep Codex and Claude local runtime config in
+sync before committing and pushing this repository.
